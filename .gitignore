@@ -1,4 +1,14 @@
-# Created by .ignore support plugin (hsz.mobi)
+
+### SBT template
+# Simple Build Tool
+# http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
+
+target/
+lib_managed/
+src_managed/
+project/boot/
+.cache
+.sbtserver
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -30,7 +40,6 @@
 
 # IntelliJ
 /out/
-.idea/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -48,16 +57,9 @@ fabric.properties
 *.log
 
 # sbt specific
-.cache
-.history
 .lib/
 dist/*
-target/
-lib_managed/
-src_managed/
-project/boot/
 project/plugins/project/
-.sbtserver/
 
 # Scala-IDE specific
 .scala_dependencies
@@ -81,6 +83,3 @@ test-result
 server.pid
 *.eml
 /dist/
-### SBT template
-# Simple Build Tool
-# http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
