@@ -7,11 +7,23 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.11.8"
 
 scalacOptions := Seq(
-  "-unchecked",
-  "-feature",
-  "-deprecation",
-  "-encoding",
-  "utf8"
+  "-unchecked",             // Enable additional warnings where generated code depends on assumptions
+  "-deprecation",           // Emit warning and location for usages of deprecated APIs
+  "-explaintypes",          // Explain type errors in more detail
+  "-feature",               // Emit warning and location for usages of features that should be imported explicitly
+  "-language:_",            // Enable or disable language features: '_' for all
+  "-target:jvm-1.8",        // Specify which backend to use
+  "-encoding", "UTF-8",     // Specify character encoding used by source files
+  //  "-optimise,"               // Generates faster bytecode by applying optimisations to the program
+  // ******* Advanced options *******
+  "-Xcheckinit",            // Wrap field accessors to throw an exception on uninitialized access.
+  "-Xlint:_",               // Enable or disable specific warnings: '_' for all
+  // ******* Private options *******
+  "-Yconst-opt",            // Perform optimization with constant values
+  "-Ywarn-dead-code",       // Warn when dead code is identified
+  "-Ywarn-inaccessible",    // Warn about inaccessible types in method signatures
+  "-Ywarn-unused",          // Warn when local and private vals, vars, defs, and types are unused
+  "-Ywarn-value-discard"    // Warn when non-Unit expression results are unused
 )
 
 libraryDependencies ++= Seq(
