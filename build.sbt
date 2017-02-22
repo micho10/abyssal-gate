@@ -2,7 +2,9 @@ name := """abyssal-gate"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file("."))
+  .enablePlugins(PlayScala)
+  .enablePlugins(SbtWeb)
 
 scalaVersion := "2.11.8"
 
@@ -35,6 +37,9 @@ libraryDependencies ++= Seq(
 
 /** Activator needs this setting made true */
 fork in run := false
+
+/** All sbt-web asset pipeline plugins must declare their order of execution */
+pipelineStages := Seq(gzip)
 
 /******************** Extra Play Framework devSettings **********************
   *
