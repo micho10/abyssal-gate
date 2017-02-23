@@ -1,63 +1,15 @@
-@*
-* This template takes a single argument, a String containing a message to display.
-*@
-@(message: String)
-
-@*
-* Call the `main` template with two arguments. The first argument is a `String` with the title of the page,
-* the second argument is an `Html` object containing the body of the page.
-*@
-@main(message) {
-
-}
-
+@()
 <div id="page-wrapper">
 
-    <!-- Header -->
-  <header id="header">
-    <h1 id="logo"><a href="index.html">Landed</a></h1>
-    <nav id="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="#">Layouts</a>
-          <ul>
-            <li><a href="left-sidebar.html">Left Sidebar</a></li>
-            <li><a href="right-sidebar.html">Right Sidebar</a></li>
-            <li><a href="no-sidebar.html">No Sidebar</a></li>
-            <li>
-              <a href="#">Submenu</a>
-              <ul>
-                <li><a href="#">Option 1</a></li>
-                <li><a href="#">Option 2</a></li>
-                <li><a href="#">Option 3</a></li>
-                <li><a href="#">Option 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="elements.html">Elements</a></li>
-        <li><a href="#" class="button special">Sign Up</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Header -->
+  @header()
 
-    <!-- Banner -->
-  <section id="banner">
-    <div class="content">
-      <header>
-        <h2>The future has landed</h2>
-        <p>And there are no hoverboards or flying cars.<br />
-          Just apps. Lots of mother flipping apps.</p>
-      </header>
-      <span class="image"><img src="@routes.Assets.versioned("images/pic01.jpg")" alt="" /></span>
-    </div>
-    <a href="#one" class="goto-next scrolly">Next</a>
-  </section>
+  <!-- Banner -->
+  @banner()
 
-    <!-- One -->
+  <!-- One -->
   <section id="one" class="spotlight style1 bottom">
-    <span class="image fit main"><img src="@routes.Assets.versioned("images/pic02.jpg")" alt="" /></span>
+    <span class="image fit main"><img src="@routes.Assets.versioned("../../../public/images/pic02.jpg")" alt="" /></span>
     <div class="content">
       <div class="container">
         <div class="row">
@@ -87,9 +39,9 @@
     <a href="#two" class="goto-next scrolly">Next</a>
   </section>
 
-    <!-- Two -->
+  <!-- Two -->
   <section id="two" class="spotlight style2 right">
-    <span class="image fit main"><img src="@routes.Assets.versioned("images/pic03.jpg")" alt="" /></span>
+    <span class="image fit main"><img src="@routes.Assets.versioned("../../../public/images/pic03.jpg")" alt="" /></span>
     <div class="content">
       <header>
         <h2>Interdum amet non magna accumsan</h2>
@@ -103,9 +55,9 @@
     <a href="#three" class="goto-next scrolly">Next</a>
   </section>
 
-    <!-- Three -->
+  <!-- Three -->
   <section id="three" class="spotlight style3 left">
-    <span class="image fit main bottom"><img src="@routes.Assets.versioned("images/pic04.jpg")" alt="" /></span>
+    <span class="image fit main bottom"><img src="@routes.Assets.versioned("../../../public/images/pic04.jpg")" alt="" /></span>
     <div class="content">
       <header>
         <h2>Interdum felis blandit praesent sed augue</h2>
@@ -119,7 +71,7 @@
     <a href="#four" class="goto-next scrolly">Next</a>
   </section>
 
-    <!-- Four -->
+  <!-- Four -->
   <section id="four" class="wrapper style1 special fade-up">
     <div class="container">
       <header class="major">
@@ -168,7 +120,7 @@
     </div>
   </section>
 
-    <!-- Five -->
+  <!-- Five -->
   <section id="five" class="wrapper style2 special fade">
     <div class="container">
       <header>
@@ -184,29 +136,17 @@
     </div>
   </section>
 
-    <!-- Footer -->
-  <footer id="footer">
-    <ul class="icons">
-      <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-      <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-      <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-      <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-      <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-    </ul>
-    <ul class="copyright">
-      <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-    </ul>
-  </footer>
+  <!-- Footer -->
+  @footer()
 
 </div>
 
   <!-- Scripts -->
-<script src="@routes.Assets.versioned("javascripts/jquery.min.js")"></script>
-<script src="@routes.Assets.versioned("javascripts/jquery.scrolly.min.js")"></script>
-<script src="@routes.Assets.versioned("javascripts/jquery.dropotron.min.js")"></script>
-<script src="@routes.Assets.versioned("javascripts/jquery.scrollex.min.js")"></script>
-<script src="@routes.Assets.versioned("javascripts/skel.min.js")"></script>
-<script src="@routes.Assets.versioned("javascripts/util.js")"></script>
+<script src="@routes.Assets.versioned("../../../public/javascripts/jquery.min.js")"></script>
+<script src="@routes.Assets.versioned("../../../public/javascripts/jquery.scrolly.min.js")"></script>
+<script src="@routes.Assets.versioned("../../../public/javascripts/jquery.dropotron.min.js")"></script>
+<script src="@routes.Assets.versioned("../../../public/javascripts/jquery.scrollex.min.js")"></script>
+<script src="@routes.Assets.versioned("../../../public/javascripts/skel.min.js")"></script>
+<script src="@routes.Assets.versioned("../../../public/javascripts/util.js")"></script>
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="@routes.Assets.versioned("javascripts/main.js")"></script>
+<script src="@routes.Assets.versioned("../../../public/javascripts/main.js")"></script>
