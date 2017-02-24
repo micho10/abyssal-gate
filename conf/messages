@@ -1,6 +1,7 @@
+home.common.link.next = Next
+
 home.banner.header.h2 = The future has landed
 home.banner.header.p = And there are no hoverboards or flying cars.<br />Just apps. Lots of mother flipping apps.
-home.banner.link.next = Next
 
 home.footer.link.1 = Twitter
 home.footer.link.2 = Facebook
@@ -23,7 +24,6 @@ home.header.nav.link.2.4.1 = Option 1
 home.header.nav.link.2.4.2 = Option 2
 home.header.nav.link.2.4.3 = Option 3
 home.header.nav.link.2.4.4 = Option 4
-
 home.header.nav.link.3 = Elements
 home.header.nav.link.4 = Sign Up
 
