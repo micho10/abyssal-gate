@@ -56,7 +56,11 @@ scalacOptions := compilerFlags
   */
 libraryDependencies ++= Seq(
   guice,
-  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.1" % Test
+  openId,
+  "org.scalatestplus.play" %% "scalatestplus-play"              % "3.1.1" % Test,
+  "com.typesafe.play"      %% "play-json"                       % "2.6.4",
+  "com.typesafe.play"      %% "play-iteratees"                  % "2.6.1",
+  "com.typesafe.play"      %% "play-iteratees-reactive-streams" % "2.6.1"
 )
 
 // Adds additional packages into Twirl
