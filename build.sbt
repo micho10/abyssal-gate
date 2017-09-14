@@ -1,3 +1,5 @@
+import CompilerFlags._
+
 /**
   * Scoped Keys:
   *
@@ -17,7 +19,7 @@ lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .enablePlugins(SbtWeb)
 
-scalaVersion in ThisBuild := "2.11.8"
+scalaVersion in ThisBuild := "2.12.3"
 
 scalacOptions in ThisBuild := Seq(
   "-unchecked",             // Enable additional warnings where generated code depends on assumptions
@@ -69,16 +71,16 @@ scalacOptions in ThisBuild := Seq(
   */
 libraryDependencies ++= Seq(
   jdbc,
-  cache,
+  ehcache,
   ws,
-  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
+  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.1" % Test
 )
 
 /**
   * Resolvers
   * =========
   *
-  * Add aditional repositories with dependencies not in maven central.
+  * Add additional repositories with dependencies not in maven central.
   *
   * resolvers += name at location
   *
