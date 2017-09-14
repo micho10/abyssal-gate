@@ -50,8 +50,8 @@ object CompilerFlags {
     "-Ywarn-value-discard"               // Warn when non-Unit expression results are unused.
   )
 
-  private lazy val excludedReplOptions = Set("-Ywarn-unused:imports", "-Xfatal-warnings")
+//  private lazy val excludedReplOptions = Set("-Ywarn-unused:imports", "-Xfatal-warnings")
 
-  def filterExcludedReplOptions(options: Seq[String]): Seq[String] = options.filterNot(excludedReplOptions)
+//  def filterExcludedReplOptions(options: Seq[String]): Seq[String] = options.filterNot(excludedReplOptions)
 
 }

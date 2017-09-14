@@ -12,34 +12,19 @@ import CompilerFlags._
   *   - key                         identifies the key being scoped.
   */
 name := """abyssal-gate"""
+organization := "org.nekosoft"
 
-version in ThisBuild := "1.0-SNAPSHOT"
+version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file("."))
-  .enablePlugins(PlayScala)
-  .enablePlugins(SbtWeb)
+lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion in ThisBuild := "2.12.3"
+scalaVersion := "2.12.3"
 
-scalacOptions in ThisBuild := Seq(
-  "-unchecked",             // Enable additional warnings where generated code depends on assumptions
-  "-deprecation",           // Emit warning and location for usages of deprecated APIs
-  "-explaintypes",          // Explain type errors in more detail
-  "-feature",               // Emit warning and location for usages of features that should be imported explicitly
-  "-language:_",            // Enable or disable language features: '_' for all
-  "-target:jvm-1.8",        // Specify which backend to use
-  "-encoding", "UTF-8",     // Specify character encoding used by source files
-  //  "-optimise,"               // Generates faster bytecode by applying optimisations to the program
-  // ******* Advanced options *******
-  "-Xcheckinit",            // Wrap field accessors to throw an exception on uninitialized access.
-  "-Xlint:_",               // Enable or disable specific warnings: '_' for all
-  // ******* Private options *******
-  "-Yconst-opt",            // Perform optimization with constant values
-  "-Ywarn-dead-code",       // Warn when dead code is identified
-  "-Ywarn-inaccessible",    // Warn about inaccessible types in method signatures
-  "-Ywarn-unused",          // Warn when local and private vals, vars, defs, and types are unused
-  "-Ywarn-value-discard"    // Warn when non-Unit expression results are unused
-)
+scalacOptions := compilerFlags
+//scalacOptions in (compile, console) ~= (_.filterNot(Set(
+//  "-Ywarn-unused:imports",
+//  "-Xfatal-warnings"
+//)))
 
 /**
   * libraryDependencies += groupID % artifactID % revision % configuration
@@ -70,39 +55,15 @@ scalacOptions in ThisBuild := Seq(
   *
   */
 libraryDependencies ++= Seq(
-  jdbc,
-  ehcache,
-  ws,
+  guice,
   "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.1" % Test
 )
 
-/**
-  * Resolvers
-  * =========
-  *
-  * Add additional repositories with dependencies not in maven central.
-  *
-  * resolvers += name at location
-  *
-  * Example:
-  *
-  * resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
-  *
-  */
+// Adds additional packages into Twirl
+//TwirlKeys.templateImports += "org.nekosoft.controllers._"
 
-/** Activator needs this setting made true */
-fork in run := false
-
-/** All sbt-web asset pipeline plugins must declare their order of execution */
-pipelineStages := Seq(gzip)
-
-/******************** Extra Play Framework devSettings **********************
-  *
-  * You can configure extra settings for the run command in your build.sbt.
-  * These settings won’t be used when you deploy your application.
-  *
-  */
-//PlayKeys.devSettings := Seq("play.server.http.port" -> "8080")
+// Adds additional packages into conf/routes
+// play.sbt.routes.RoutesKeys.routesImport += "org.nekosoft.binders._"
 
 /**
   * By default (since 2.5.0), Play will generate a router that will declare all the controllers that it routes to
@@ -118,3 +79,12 @@ routesGenerator := InjectedRoutesGenerator
 
 // Enable the static routes generator
 //routesGenerator := StaticRoutesGenerator
+
+/******************** Extra Play Framework devSettings **********************
+  *
+  * You can configure extra settings for the run command in your build.sbt.
+  * These settings won’t be used when you deploy your application.
+  *
+  */
+//PlayKeys.devSettings := Seq("play.server.http.port" -> "8080")
+
