@@ -1,12 +1,12 @@
-@()@(implicit request: Request)
+@()(implicit messages: Messages)
 
 <div id="page-wrapper">
 
   <!-- Header -->
-  @home.header()
+  @header()
 
   <!-- Banner -->
-  @home.banner()
+  @banner()
 
   <!-- One -->
   <section id="one" class="spotlight style1 bottom">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <a href="#two" class="goto-next scrolly">Next</a>
+    <a href="#two" class="goto-next scrolly">@Messages("home.common.link.next")</a>
   </section>
 
   <!-- Two -->
@@ -53,7 +53,7 @@
         <li><a href="#" class="button">Learn More</a></li>
       </ul>
     </div>
-    <a href="#three" class="goto-next scrolly">Next</a>
+    <a href="#three" class="goto-next scrolly">@Messages("home.common.link.next")</a>
   </section>
 
   <!-- Three -->
@@ -69,7 +69,7 @@
         <li><a href="#" class="button">Learn More</a></li>
       </ul>
     </div>
-    <a href="#four" class="goto-next scrolly">Next</a>
+    <a href="#four" class="goto-next scrolly">@Messages("home.common.link.next")</a>
   </section>
 
   <!-- Four -->
@@ -138,7 +138,7 @@
   </section>
 
   <!-- Footer -->
-  @home.footer()
+  @footer()
 
 </div>
 

@@ -1,14 +1,15 @@
-@()
+@()(implicit messages: Messages)
+
 <footer id="footer">
   <ul class="icons">
-    <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-    <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-    <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-    <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-    <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-    <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+    <li><a href="#" class="icon alt fa-twitter"><span class="label">@Messages("home.footer.link.1")</span></a></li>
+    <li><a href="#" class="icon alt fa-facebook"><span class="label">@Messages("home.footer.link.2")</span></a></li>
+    <li><a href="#" class="icon alt fa-linkedin"><span class="label">@Messages("home.footer.link.3")</span></a></li>
+    <li><a href="#" class="icon alt fa-instagram"><span class="label">@Messages("home.footer.link.4")</span></a></li>
+    <li><a href="#" class="icon alt fa-github"><span class="label">@Messages("home.footer.link.5")</span></a></li>
+    <li><a href="#" class="icon alt fa-envelope"><span class="label">@Messages("home.footer.link.6")</span></a></li>
   </ul>
   <ul class="copyright">
-    <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    <li>@Messages("home.footer.copyright.1")</li><li>@Messages("home.footer.copyright.2") <a href="http://html5up.net">@Messages("home.footer.copyright.link")</a></li>
   </ul>
 </footer>

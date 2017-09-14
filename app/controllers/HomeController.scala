@@ -1,8 +1,10 @@
 package controllers
 
-import javax.inject._
 
-import play.api.mvc._
+import javax.inject.{Inject, Singleton}
+
+import play.api.i18n.{I18nSupport, MessagesApi}
+import play.api.mvc.{Action, Controller}
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the application's home page.
@@ -12,7 +14,7 @@ import play.api.mvc._
  * The @Inject tag indicates it's using an injected routes generator.
  */
 @Singleton
-class HomeController @Inject() extends Controller {
+class HomeController @Inject()(val messagesApi: MessagesApi) extends Controller with I18nSupport {
 
   /**
    * Create an Action to render an HTML page with a welcome message.

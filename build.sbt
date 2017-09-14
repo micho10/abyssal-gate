@@ -1,14 +1,27 @@
+import CompilerFlags._
+
+/**
+  * Scoped Keys:
+  *
+  *   <code>{<build-uri>}<project-id>/config:intask::key</code>
+  *
+  *   - {<build-uri>}/<project-id>  identifies the project axis
+  *       (the <project-id> part will be missing if the project axis has “entire build” scope)
+  *   - config                      identifies the configuration axis.
+  *   - intask                      identifies the task axis.
+  *   - key                         identifies the key being scoped.
+  */
 name := """abyssal-gate"""
 
-version := "1.0-SNAPSHOT"
+version in ThisBuild := "1.0-SNAPSHOT"
 
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .enablePlugins(SbtWeb)
 
-scalaVersion := "2.11.8"
+scalaVersion in ThisBuild := "2.12.3"
 
-scalacOptions := Seq(
+scalacOptions in ThisBuild := Seq(
   "-unchecked",             // Enable additional warnings where generated code depends on assumptions
   "-deprecation",           // Emit warning and location for usages of deprecated APIs
   "-explaintypes",          // Explain type errors in more detail
@@ -28,13 +41,54 @@ scalacOptions := Seq(
   "-Ywarn-value-discard"    // Warn when non-Unit expression results are unused
 )
 
+/**
+  * libraryDependencies += groupID % artifactID % revision % configuration
+  *
+  * Using this pattern:
+  *
+  * libraryDependencies += groupID %% artifactID % revision % configuration
+  *
+  * sbt will add the project's Scala version to the artifact name. It's just a shortcut.
+  * These 2 declarations are identical (assuming scalaVersion is 2.11.1):
+  *
+  *   libraryDependencies += "org.scala-tools" %  "scala-stm_2.11.1"  % "0.3"
+  *   libraryDependencies += "org.scala-tools" %% "scala-stm"         % "0.3"
+  *
+  * Revision options:
+  *   - latest.integration    selects the latest revision of the dependency module
+  *   - latest.[any status]   selects the latest revision of the dependency module with at least the specified status
+  *   - xxx+                  selects the latest sub-revision of the dependency module
+  *   - version ranges        mathematical notation for ranges
+  *     * [1.0, 2.0]            matches all versions >= 1.0 and <= 2.0
+  *     * [1.0, 2.0[            matches all versions >= 1.0 and < 2.0
+  *     * ]1.0, 2.0]            matches all versions > 1.0 and <= 2.0
+  *     * ]1.0, 2.0[            matches all versions > 1.0 and < 2.0
+  *     * [1.0,)                matches all versions >= 1.0
+  *     * ]1.0,)                matches all versions > 1.0
+  *     * (,2.0]                matches all versions <= 2.0
+  *     * (,2.0[                matches all versions < 2.0
+  *
+  */
 libraryDependencies ++= Seq(
   jdbc,
-  cache,
+  ehcache,
   ws,
-  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.1" % Test,
-  "com.typesafe.play"      %% "play"               % "2.5.16"
+  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.1" % Test
 )
+
+/**
+  * Resolvers
+  * =========
+  *
+  * Add additional repositories with dependencies not in maven central.
+  *
+  * resolvers += name at location
+  *
+  * Example:
+  *
+  * resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+  *
+  */
 
 /** Activator needs this setting made true */
 fork in run := false

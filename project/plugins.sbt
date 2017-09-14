@@ -1,5 +1,5 @@
 // The Play plugin
-addSbtPlugin("com.typesafe.play" % "sbt-plugin"       % "2.5.16")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin"       % "2.6.3")
 
 // web plugins
 
@@ -8,6 +8,7 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-coffeescript"  % "1.0.1")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-less"          % "1.1.2")
 
+// Allows jslint to be used from within sbt. Builds on com.typesafe:webdriver in order to execute jslint.js along with the scripts to verify
 addSbtPlugin("com.typesafe.sbt" % "sbt-jshint"        % "1.0.5")
 
 // RequireJs support for sbt-web

@@ -1,4 +1,5 @@
-@()
+@()(implicit messages: Messages)
+
 <section id="banner">
   <div class="content">
     <header>
@@ -7,5 +8,5 @@
     </header>
     <span class="image"><img src="@routes.Assets.versioned("../../../public/images/pic01.jpg")" alt="" /></span>
   </div>
-  <a href="#one" class="goto-next scrolly">Next</a>
+  <a href="#one" class="goto-next scrolly">@Messages("home.common.link.next")</a>
 </section>
