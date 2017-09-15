@@ -1,6 +1,7 @@
 package controllers
 
 import javax.inject.Inject
+import javax.inject.Singleton
 
 import play.api.mvc._
 
@@ -21,6 +22,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
    * with a path of `/`.
    */
   def index() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.index())
+    Ok(views.html.index(""))
   }
 }
