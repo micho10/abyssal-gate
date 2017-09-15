@@ -49,9 +49,4 @@ object CompilerFlags {
     "-Ywarn-unused:privates",            // Warn if a private member is unused.
     "-Ywarn-value-discard"               // Warn when non-Unit expression results are unused.
   )
-
-  private lazy val excludedReplOptions = Set("-Ywarn-unused:imports", "-Xfatal-warnings")
-
-  def filterExcludedReplOptions(options: Seq[String]): Seq[String] = options.filterNot(excludedReplOptions)
-
 }

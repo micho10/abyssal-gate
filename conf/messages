@@ -1,3 +1,4 @@
+# https://www.playframework.com/documentation/latest/ScalaI18N
 home.common.link.next = Next
 
 home.banner.header.h2 = The future has landed
@@ -26,4 +27,3 @@ home.header.nav.link.2.4.3 = Option 3
 home.header.nav.link.2.4.4 = Option 4
 home.header.nav.link.3 = Elements
 home.header.nav.link.4 = Sign Up
-
