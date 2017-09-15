@@ -21,10 +21,10 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.12.3"
 
 scalacOptions := compilerFlags
-//scalacOptions in (compile, console) ~= (_.filterNot(Set(
-//  "-Ywarn-unused:imports",
-//  "-Xfatal-warnings"
-//)))
+scalacOptions in (Compile, console) ~= (_.filterNot(Set(
+  "-Ywarn-unused:imports",
+  "-Xfatal-warnings"
+)))
 
 /**
   * libraryDependencies += groupID % artifactID % revision % configuration
