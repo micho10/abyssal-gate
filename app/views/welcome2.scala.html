@@ -1,8 +1,8 @@
-@(style: String = "scala")
+@()
 
 <div id="page-wrapper">
 
-        <!-- Header -->
+    <!-- Header -->
     <header id="header">
         <h1 id="logo"><a href="index.html">Landed</a></h1>
         <nav id="nav">
@@ -31,7 +31,7 @@
         </nav>
     </header>
 
-        <!-- Banner -->
+    <!-- Banner -->
     <section id="banner">
         <div class="content">
             <header>
@@ -39,14 +39,14 @@
                 <p>And there are no hoverboards or flying cars.<br />
                     Just apps. Lots of mother flipping apps.</p>
             </header>
-            <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+            <span class="image"><img src="@routes.Assets.versioned("images/pic01.jpg")" alt="" /></span>
         </div>
         <a href="#one" class="goto-next scrolly">Next</a>
     </section>
 
-        <!-- One -->
+    <!-- One -->
     <section id="one" class="spotlight style1 bottom">
-        <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+        <span class="image fit main"><img src="@routes.Assets.versioned("images/pic02.jpg")" alt="" /></span>
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -76,9 +76,9 @@
         <a href="#two" class="goto-next scrolly">Next</a>
     </section>
 
-        <!-- Two -->
+    <!-- Two -->
     <section id="two" class="spotlight style2 right">
-        <span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+        <span class="image fit main"><img src="@routes.Assets.versioned("images/pic03.jpg")" alt="" /></span>
         <div class="content">
             <header>
                 <h2>Interdum amet non magna accumsan</h2>
@@ -92,9 +92,9 @@
         <a href="#three" class="goto-next scrolly">Next</a>
     </section>
 
-        <!-- Three -->
+    <!-- Three -->
     <section id="three" class="spotlight style3 left">
-        <span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+        <span class="image fit main bottom"><img src="@routes.Assets.versioned("images/pic04.jpg")" alt="" /></span>
         <div class="content">
             <header>
                 <h2>Interdum felis blandit praesent sed augue</h2>
@@ -108,7 +108,7 @@
         <a href="#four" class="goto-next scrolly">Next</a>
     </section>
 
-        <!-- Four -->
+    <!-- Four -->
     <section id="four" class="wrapper style1 special fade-up">
         <div class="container">
             <header class="major">
@@ -157,7 +157,7 @@
         </div>
     </section>
 
-        <!-- Five -->
+    <!-- Five -->
     <section id="five" class="wrapper style2 special fade">
         <div class="container">
             <header>
@@ -173,7 +173,7 @@
         </div>
     </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer id="footer">
         <ul class="icons">
             <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
@@ -190,12 +190,12 @@
 
 </div>
 
-    <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets/js/main.js"></script>
+<!-- Scripts -->
+<script src="@routes.Assets.versioned("javascripts/jquery.min.js")"></script>
+<script src="@routes.Assets.versioned("javascripts/jquery.scrolly.min.js")"></script>
+<script src="@routes.Assets.versioned("javascripts/jquery.dropotron.min.js")"></script>
+<script src="@routes.Assets.versioned("javascripts/jquery.scrollex.min.js")"></script>
+<script src="@routes.Assets.versioned("javascripts/skel.min.js")"></script>
+<script src="@routes.Assets.versioned("javascripts/util.js")"></script>
+    <!--[if lte IE 8]><script src="@routes.Assets.versioned("javascripts/ie/respond.min.js")"></script><![endif]-->
+<script src="@routes.Assets.versioned("javascripts/main.js")"></script>
