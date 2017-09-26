@@ -7,7 +7,6 @@
 GET     /                           controllers.HomeController.index
 # An example controller showing how to use dependency injection
 # An example controller showing a sample home page
-GET     /index2                     controllers.HomeController.index2
 GET     /elements                   controllers.HomeController.elements
 
 GET     /count                      controllers.CountController.count
