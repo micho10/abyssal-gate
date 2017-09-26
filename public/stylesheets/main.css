@@ -2031,7 +2031,7 @@ body.landing {
 body.landing:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
+    font-family: FontAwesome, fantasy;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -2221,7 +2221,7 @@ textarea:focus {
 .select-wrapper:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
+    font-family: FontAwesome, fantasy;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -2296,7 +2296,7 @@ input[type="checkbox"] + label:before,
 input[type="radio"] + label:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
+    font-family: FontAwesome, fantasy;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -2646,6 +2646,7 @@ dl {
     margin: 0 0 2em 0;
 }
 
+
 /* Table */
 
 .table-wrapper {
@@ -2713,6 +2714,7 @@ table.alt thead {
 table.alt tfoot {
     border-top: 0;
 }
+
 
 /* Button */
 
@@ -2829,6 +2831,7 @@ input[type="button"]:disabled,
     opacity: 0.25;
 }
 
+
 /* Goto Next */
 
 .goto-next {
@@ -2861,6 +2864,7 @@ input[type="button"]:disabled,
     width: 2em;
     z-index: 1;
 }
+
 
 /* Spotlight */
 
@@ -3092,6 +3096,7 @@ body.is-touch .spotlight {
     background-attachment: scroll;
 }
 
+
 /* Wrapper */
 
 .wrapper {
@@ -3208,6 +3213,7 @@ body.is-touch .spotlight {
     opacity: 0;
 }
 
+
 /* Dropotron */
 
 .dropotron {
@@ -3264,6 +3270,7 @@ body.is-touch .spotlight {
 body.landing .dropotron.level-0 {
     margin-top: 0;
 }
+
 
 /* Header */
 
@@ -3344,6 +3351,7 @@ body.landing #header {
     box-shadow: none;
     position: absolute;
 }
+
 
 /* Banner */
 
@@ -3427,6 +3435,7 @@ body.is-touch #banner {
     background-attachment: scroll;
 }
 
+
 /* Footer */
 
 #footer {
@@ -3442,7 +3451,7 @@ body.is-touch #banner {
 #footer .icons .icon.alt:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
+    font-family: FontAwesome, fantasy;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -3480,6 +3489,7 @@ body.is-touch #banner {
     color: inherit;
 }
 
+
 /* XLarge */
 
 @media screen and (max-width: 1680px) {
@@ -3491,6 +3501,7 @@ body.is-touch #banner {
     }
 
 }
+
 
 /* Large */
 
@@ -3542,6 +3553,7 @@ body.is-touch #banner {
     }
 
 }
+
 
 /* Medium */
 
@@ -3623,6 +3635,7 @@ body.is-touch #banner {
     }
 
 }
+
 
 /* Small */
 
@@ -3800,7 +3813,7 @@ body.is-touch #banner {
     #titleBar .toggle:before {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
-        font-family: FontAwesome;
+        font-family: FontAwesome, fantasy;
         font-style: normal;
         font-weight: normal;
         text-transform: none !important;
@@ -3922,6 +3935,7 @@ body.is-touch #banner {
     }
 
 }
+
 
 /* XSmall */
 
