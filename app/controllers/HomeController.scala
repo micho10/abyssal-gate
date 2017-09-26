@@ -36,4 +36,14 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.index2())
   }
 
+  /**
+    * Create an Action to render an HTML page.
+    *
+    * The configuration in the `routes` file means that this method will be called when the application receives a `GET` request
+    * with a path of `/elements`.
+    */
+  def elements() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.elements.elements())
+  }
+
 }
