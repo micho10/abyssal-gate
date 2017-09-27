@@ -36,4 +36,37 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.elements.elements())
   }
 
+
+  /**
+    * Create an Action to render an HTML page.
+    *
+    * The configuration in the `routes` file means that this method will be called when the application receives a `GET` request
+    * with a path of `/elements`.
+    */
+  def leftSidebar() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.elements.leftSidebar())
+  }
+
+
+  /**
+    * Create an Action to render an HTML page.
+    *
+    * The configuration in the `routes` file means that this method will be called when the application receives a `GET` request
+    * with a path of `/elements`.
+    */
+  def rightSidebar() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.elements.rightSidebar())
+  }
+
+
+  /**
+    * Create an Action to render an HTML page.
+    *
+    * The configuration in the `routes` file means that this method will be called when the application receives a `GET` request
+    * with a path of `/elements`.
+    */
+  def noSidebar() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.elements.noSidebar())
+  }
+
 }
