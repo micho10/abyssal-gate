@@ -3,12 +3,12 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
-# An example controller showing a sample home page
+# Controller showing the home page
 GET     /                           controllers.HomeController.index
-# An example controller showing how to use dependency injection
-# An example controller showing a sample home page
+# Controller showing a sample elements page
 GET     /elements                   controllers.HomeController.elements
 
+# An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
