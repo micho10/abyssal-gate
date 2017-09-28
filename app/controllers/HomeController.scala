@@ -1,8 +1,8 @@
 package controllers
 
-import javax.inject.Inject
-import javax.inject.Singleton
+import javax.inject.{Inject, Singleton}
 
+import play.api.i18n._
 import play.api.mvc._
 
 /**
@@ -13,7 +13,7 @@ import play.api.mvc._
  * The @Inject tag indicates it's using an injected routes generator.
  */
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) with I18nSupport {
 
   /**
     * Create an Action to render an HTML page.
