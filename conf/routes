@@ -5,17 +5,19 @@
 
 # Controller showing the home page
 GET     /                           controllers.HomeController.index
+
+# Responds with 404 Not Found
+GET     /orders                     controllers.Default.notFound
+
 # Controller showing a sample elements page
 GET     /elements                   controllers.HomeController.elements
-# Controller showing a sample elements page
 GET     /leftsidebar                controllers.HomeController.leftSidebar
-# Controller showing a sample elements page
 GET     /rightsidebar               controllers.HomeController.rightSidebar
-# Controller showing a sample elements page
 GET     /nosidebar                  controllers.HomeController.noSidebar
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
+
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
 
