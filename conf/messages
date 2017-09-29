@@ -29,9 +29,9 @@ common.header.nav.2.4.4 = Option 4
 common.header.nav.3 = Elements
 common.header.nav.4 = Sign Up
 
-##############################################################
+######## Welcome ########
 
-home.common.link.next = Next
+home.welcome.banner.header.h2 = The future has landed
+home.welcome.banner.header.p = And there are no hoverboards or flying cars.<br />Just apps. Lots of mother flipping apps.
+home.welcome.banner.link.next = Next
 
-home.banner.header.h2 = The future has landed
-home.banner.header.p = And there are no hoverboards or flying cars.<br />Just apps. Lots of mother flipping apps.
