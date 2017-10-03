@@ -1,10 +1,5 @@
 @()(implicit messagesProvider: MessagesProvider)
 
-<div id="page-wrapper">
-
-    <!-- Header -->
-    @common.header()
-
     <!-- Banner -->
     <section id="banner">
         <div class="content">
@@ -46,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <a href="#two" class="goto-next scrolly">Next</a>
+        <a href="#two" class="goto-next scrolly">@Messages("home.welcome.banner.link.next")</a>
     </section>
 
     <!-- Two -->
@@ -62,7 +57,7 @@
                 <li><a href="#" class="button">Learn More</a></li>
             </ul>
         </div>
-        <a href="#three" class="goto-next scrolly">Next</a>
+        <a href="#three" class="goto-next scrolly">@Messages("home.welcome.banner.link.next")</a>
     </section>
 
     <!-- Three -->
@@ -78,7 +73,7 @@
                 <li><a href="#" class="button">Learn More</a></li>
             </ul>
         </div>
-        <a href="#four" class="goto-next scrolly">Next</a>
+        <a href="#four" class="goto-next scrolly">@Messages("home.welcome.banner.link.next")</a>
     </section>
 
     <!-- Four -->
@@ -145,11 +140,3 @@
             </form>
         </div>
     </section>
-
-    <!-- Footer -->
-    @common.footer()
-
-</div>
-
-<!-- Scripts -->
-@common.scripts()

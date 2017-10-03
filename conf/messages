@@ -35,3 +35,7 @@ home.welcome.banner.header.h2 = The future has landed
 home.welcome.banner.header.p = And there are no hoverboards or flying cars.<br />Just apps. Lots of mother flipping apps.
 home.welcome.banner.link.next = Next
 
+######## Welcome ########
+
+home.gallery.banner.header.h2 = Gallery
+
