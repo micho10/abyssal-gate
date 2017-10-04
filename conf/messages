@@ -22,7 +22,7 @@ home.gallery.banner.header.h2 = Gallery
 
 common.header.h1.link = Abyssal Gate
 
-common.header.nav.1 = Home
+common.header.nav.1 = Gallery
 common.header.nav.2 = Layouts
 common.header.nav.2.1 = Left Sidebar
 common.header.nav.2.2 = Right Sidebar
@@ -34,7 +34,6 @@ common.header.nav.2.4.3 = Option 3
 common.header.nav.2.4.4 = Option 4
 common.header.nav.3 = Elements
 common.header.nav.4 = Sign Up
-common.header.nav.5 = Gallery
 
 
 ######## Welcome ########

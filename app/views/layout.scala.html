@@ -1,0 +1,16 @@
+@(content: Html)(implicit messagesProvider: MessagesProvider)
+
+<div id="page-wrapper">
+
+    <!-- Header -->
+    @common.header()
+
+    @* And here's where we render the `Html` object containing the page content. *@
+    @content
+
+    <!-- Footer -->
+    @common.footer()
+</div>
+
+<!-- Scripts -->
+@common.scripts()
