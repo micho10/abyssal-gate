@@ -6,6 +6,9 @@
 # Controller showing the home page
 GET     /                           controllers.HomeController.index
 
+GET     /gallery                    controllers.HomeController.gallery
+
+
 # Responds with 404 Not Found
 GET     /orders                     controllers.Default.notFound
 

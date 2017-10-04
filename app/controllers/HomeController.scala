@@ -16,7 +16,7 @@ import play.api.mvc._
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) with I18nSupport {
 
   /**
-    * Create an Action to render an HTML page.
+    * Create an Action to render the index HTML page.
     *
     * The configuration in the `routes` file means that this method will be called when the application receives a `GET` request
     * with a path of `/index`.
@@ -25,6 +25,20 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.index())
   }
 
+
+  /**
+    * Create an Action to render the image gallery HTML page.
+    *
+    * The configuration in the `routes` file means that this method will be called when the application receives a `GET` request
+    * with a path of `/gallery`.
+    */
+  def gallery() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.gallery.gallery())
+  }
+
+
+
+  /***************************************************************************************/
 
   /**
     * Create an Action to render an HTML page.

@@ -9,8 +9,14 @@ common.footer.social.link.instagram = Instagram
 common.footer.social.link.github = GitHub
 common.footer.social.link.email = Email
 
-common.footer.copyright.text.1 = Untitled. All rights reserved.
+common.footer.copyright.text.1 = Nekosoft. All rights reserved.
 common.footer.copyright.text.2 = Design:
+
+
+######## Gallery ########
+
+home.gallery.banner.header.h2 = Gallery
+
 
 ######## Header ########
 
@@ -28,14 +34,12 @@ common.header.nav.2.4.3 = Option 3
 common.header.nav.2.4.4 = Option 4
 common.header.nav.3 = Elements
 common.header.nav.4 = Sign Up
+common.header.nav.5 = Gallery
+
 
 ######## Welcome ########
 
 home.welcome.banner.header.h2 = The future has landed
 home.welcome.banner.header.p = And there are no hoverboards or flying cars.<br />Just apps. Lots of mother flipping apps.
 home.welcome.banner.link.next = Next
-
-######## Welcome ########
-
-home.gallery.banner.header.h2 = Gallery
 
