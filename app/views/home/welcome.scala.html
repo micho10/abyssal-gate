@@ -1,3 +1,6 @@
+@*
+* This template takes no arguments but an implicit messages provider for i18n purposes.
+*@
 @()(implicit messagesProvider: MessagesProvider)
 
     <!-- Banner -->
@@ -7,7 +10,7 @@
                 <h2>@Messages("home.welcome.banner.header.h2")</h2>
                 <p>@Html(Messages("home.welcome.banner.header.p"))</p>
             </header>
-            <span class="image"><img src="@routes.Assets.versioned("images/pic01.jpg")" alt="" /></span>
+            <span class="image"><img src="@routes.Assets.versioned("images/UIC-GuildLogos-Union.png")" alt="" /></span>
         </div>
         <a href="#one" class="goto-next scrolly">@Messages("home.welcome.banner.link.next")</a>
     </section>

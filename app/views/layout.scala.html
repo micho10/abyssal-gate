@@ -1,3 +1,8 @@
+@*
+* This template is called from the `main` template. This template handles the rendering of the contents of the body tag.
+* It takes one argument, an `Html` object to insert into the body of the page. It also takes an implicit messages provider
+* for i18n purposes.
+*@
 @(content: Html)(implicit messagesProvider: MessagesProvider)
 
 <div id="page-wrapper">
