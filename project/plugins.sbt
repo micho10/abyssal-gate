@@ -20,8 +20,8 @@ addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.6")
 //
 //// sbt mocha support
 //addSbtPlugin("com.typesafe.sbt" % "sbt-mocha"         % "1.1.2")
-//
-//addSbtPlugin("org.irundaia.sbt" % "sbt-sassify"       % "1.4.9")
+
+addSbtPlugin("org.irundaia.sbt" % "sbt-sassify"       % "1.4.9")
 
 // sbt plugin for gzipping web assets
 addSbtPlugin("com.typesafe.sbt" % "sbt-gzip"          % "1.0.2")
