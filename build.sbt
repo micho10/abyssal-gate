@@ -62,6 +62,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.play"      %% "play-json"                       % "2.6.4",
   "com.typesafe.play"      %% "play-iteratees"                  % "2.6.1",
   "com.typesafe.play"      %% "play-iteratees-reactive-streams" % "2.6.1"
+//  Sentry error tracking (https://sentry.io/for/scala/)
+//  "io.sentry"              %  "sentry-logback"                  % "VERSION"
 )
 
 // Adds additional packages into Twirl
