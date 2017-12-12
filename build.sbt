@@ -58,8 +58,8 @@ scalacOptions := compilerFlags
 libraryDependencies ++= Seq(
   guice,
   openId,
-  "org.scalatestplus.play" %% "scalatestplus-play"              % "3.1.1" % Test,
-  "com.typesafe.play"      %% "play-json"                       % "2.6.4",
+  "org.scalatestplus.play" %% "scalatestplus-play"              % "3.1.2" % Test,
+  "com.typesafe.play"      %% "play-json"                       % "2.6.8",
   "com.typesafe.play"      %% "play-iteratees"                  % "2.6.1",
   "com.typesafe.play"      %% "play-iteratees-reactive-streams" % "2.6.1"
 //  Sentry error tracking (https://sentry.io/for/scala/)
